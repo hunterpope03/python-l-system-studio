@@ -1,4 +1,14 @@
-def example_details(example_num): 
+def example_details(example_num) -> list: 
+    """
+    Retrieves the data for the selected example and returns it as a list.
+    All examples come from Paul Bourke's 1991 L-System User Notes manual (attributed in GitHub).
+
+    Parameters:
+    example_num (str): The number of the example to retrieve data for.
+
+    Returns:
+    list: A list containing the name, axiom, rules, iterations, turn angle, and starting direction for the selected example.
+    """
     if example_num == '1': 
         name = 'L-System Bush 2'
         axiom = 'F'
