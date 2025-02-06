@@ -31,7 +31,7 @@ A parser, in programming terms, breaks down data into smaller pieces. So, think 
 
 The visualization process is a bit more complex. In a parsed string, there are commonly: 
 * **Variables** - values that are changed in each transformation rule (usually letters)
-* **Constants** - values that are not changed in a transformation rule, but rather define a geometric action (+ to turn, [ to create a new branch, etc.)
+* **Constants** - values that are not changed in a transformation rule, but rather define a geometric action (to turn, create a new branch, etc.)
 
 So when a visualizer takes in a parsed string, each character is a command. Some additional requirements for a visualizer might be: 
 * **Turn Angle** - defines the angle at which to turn
