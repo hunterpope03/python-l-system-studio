@@ -21,7 +21,7 @@ In the first iteration, the axiom, F, is replaced via the transformation rule fo
 In the following iterations, all of the characters in the resulting string, F + G, are again replaced by the transformation rules for both characters: 
 * ###### F + G -> (F + G) + (G + H)
 
-With more more complex axioms and transformation rules and increased idioms, L-System strings can grow to huge lengths. 
+With more more complex axioms and transformation rules and increased iterations, L-System strings can grow to huge lengths. 
 
 ##### Consider exploring Paul Bourke's [L-System Manual](https://paulbourke.net/fractals/lsys/), which was integral in my understanding of the concept.
 
