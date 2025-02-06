@@ -58,5 +58,6 @@ Here are some examples from my first version of this project:
 <img width="786" alt="Sierpinski Arrowhead" src="https://github.com/user-attachments/assets/ccfac4b6-90be-49fd-8a82-ae927cdb4e04" />
 
 ##### Quadratic Gosper, via [Paul Bourke](https://paulbourke.net/fractals/lsys/)
-<img width="786" alt="Quadratic Gosper" src="https://github.com/user-attachments/assets/c5808f2d-6b85-4b3e-86d6-16b12c5b7618" />
+<img width="784" alt="Screenshot 2025-02-05 at 7 32 53 PM" src="https://github.com/user-attachments/assets/175b4e4e-6330-4ad4-b557-b0df8fa3aa2b" />
+
 
