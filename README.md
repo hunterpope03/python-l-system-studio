@@ -55,7 +55,7 @@ Here are some examples from my first version of this project:
 <img width="786" alt="Pentaplexity" src="https://github.com/user-attachments/assets/c85a5640-4eff-46b5-8946-d103826717e6" />
 
 ##### Sierpinski Arrowhead, via [Paul Bourke](https://paulbourke.net/fractals/lsys/)
-<img width="786" alt="Sierpinski Arrowhead" src="https://github.com/user-attachments/assets/ccfac4b6-90be-49fd-8a82-ae927cdb4e04" />
+<img width="784" alt="Screenshot 2025-02-05 at 7 34 07 PM" src="https://github.com/user-attachments/assets/75717bfd-2603-46e4-9605-4649362bd756" />
 
 ##### Quadratic Gosper, via [Paul Bourke](https://paulbourke.net/fractals/lsys/)
 <img width="784" alt="Screenshot 2025-02-05 at 7 32 53 PM" src="https://github.com/user-attachments/assets/175b4e4e-6330-4ad4-b557-b0df8fa3aa2b" />
