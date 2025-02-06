@@ -23,7 +23,7 @@ In the following iterations, all of the characters in the resulting string, F + 
 
 With more more complex axioms and transformation rules and increased iterations, L-System strings can grow to huge lengths. 
 
-##### Consider exploring Paul Bourke's [L-System Manual](https://paulbourke.net/fractals/lsys/), which was integral in my understanding of the concept.
+##### Consider exploring Paul Bourke's [L-System Manual](https://paulbourke.net/fractals/lsys/), which was integral in my understanding of L-Systems.
 
 ## An L-System Parser & Visualizer Program
 
