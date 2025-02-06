@@ -34,7 +34,21 @@ This program features solely variables and logic organized into modules. I antic
 * [Lindemayer & Prusinkiewicz's 2004 _The Algorithmic Beauty of Plants_](https://algorithmicbotany.org/papers/abop/abop.pdf)
 * [Matplotlib Documentation](https://matplotlib.org/stable/index.html)
 * [Unittest Documentation](https://docs.python.org/3/library/unittest.html)
+## Visuals
+##### Dragon Curve, via [Paul Bourke](https://paulbourke.net/fractals/lsys/)
+<img width="786" alt="Dragon Curve System" src="https://github.com/user-attachments/assets/8059714b-c948-45b9-86c5-8ea79d283c44" />
 
+##### L-System Bush 2, via [Paul Bourke](https://paulbourke.net/fractals/lsys/)
+<img width="786" alt="L-System Bush 2" src="https://github.com/user-attachments/assets/9e480602-16bc-43aa-93d2-da18039eb834" />
+
+##### Pentaplexity, via [Paul Bourke](https://paulbourke.net/fractals/lsys/)
+<img width="786" alt="Pentaplexity" src="https://github.com/user-attachments/assets/c85a5640-4eff-46b5-8946-d103826717e6" />
+
+##### Sierpinski Arrowhead, via [Paul Bourke](https://paulbourke.net/fractals/lsys/)
+<img width="784" alt="Screenshot 2025-02-05 at 7 34 07 PM" src="https://github.com/user-attachments/assets/75717bfd-2603-46e4-9605-4649362bd756" />
+
+##### Quadratic Gosper, via [Paul Bourke](https://paulbourke.net/fractals/lsys/)
+<img width="784" alt="Screenshot 2025-02-05 at 7 32 53 PM" src="https://github.com/user-attachments/assets/175b4e4e-6330-4ad4-b557-b0df8fa3aa2b" />
   ##### Additional documentation and commentary are included directly within the code files. 
 
 
