@@ -39,7 +39,7 @@ So when a visualizer takes in a parsed string, each character is a command. Some
 
 Using all of this information, a visualizer is fed a parsed string and creates a complex drawing. Changing the axiom, rules, and angles allows for a plethora of possible figures to be created.
 
-Note that some programs may be more or less complex, supporting either more or less commands/features.
+Note that some programs may be more or less complex, allowing for a range of commands/features.
 
 ## Example Visuals (from v1.0.0)
 
