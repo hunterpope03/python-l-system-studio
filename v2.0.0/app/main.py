@@ -2,8 +2,8 @@ from window import *
 
 def size_window(window):
     window_width = int(window.winfo_screenwidth())
-    window_height = int(window.winfo_screenheight())
-    window.geometry(f"{window_width}x{window_height}+0+{int(window.winfo_screenheight() * 0.05)}")
+    window_height = int(window.winfo_screenheight() * 0.875)
+    window.geometry(f"{window_width}x{window_height}+0+0")
     window.minsize(window_width, window_height)
     window.resizable(True, True)
 

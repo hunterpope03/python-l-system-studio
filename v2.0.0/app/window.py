@@ -4,8 +4,8 @@ class Window:
     def __init__(self, window): 
         self.window = window
 
-        self.window_width = window.winfo_screenwidth()
-        self.window_height = window.winfo_screenheight()
+        self.window_width = int(window.winfo_screenwidth())
+        self.window_height = int(window.winfo_screenheight() * 0.875)
 
         #region title
         self.title_frame = Frame(self.window)
@@ -21,7 +21,7 @@ class Window:
         self.title_label = Label(
             self.title_frame,
             text='L-System Parser & Visualizer',
-            font=('System', 45, 'bold', 'underline'),
+            font=('System', 55, 'bold', 'underline'),
             bg='black',
             fg='white',
             anchor='center'  
@@ -134,17 +134,97 @@ class Window:
             highlightbackground='red',
             highlightthickness=2
         )
-        self.tutorial_intro_headline= Label(
+        self.system_headline= Label(
             self.system_frame,
             text='Creating an L-System',
+            font=('System', 40, 'bold'),
+            bg='black',
+            fg='white',
+            anchor='center',
+            justify='center',
+            wraplength=int(self.window_width * 0.3)
+        )
+        self.system_headline.pack(side='top', fill='both', expand=True)
+        #region system key
+        self.system_key_headline= Label(
+            self.system_frame,
+            text='L-System Character Key',
             font=('System', 25, 'bold'),
             bg='black',
             fg='white',
             anchor='center',
             justify='center',
-            wraplength=int(self.window_width * 0.20)
+            wraplength=int(self.window_width * 0.3)
         )
-        self.tutorial_intro_headline.pack(side='top', fill='both', expand=True)
+        self.system_key_headline.pack(side='top', fill='both', expand=True)
+        self.system_key_header= Label(
+            self.system_frame,
+            text='Character\t\t\tCommand\n\n',
+            font=('System', 15, 'bold', 'underline'), 
+            bg='black',
+            fg='white',
+            anchor='center',
+            justify='center',
+            wraplength=int(self.window_width * 0.3)
+        )
+        self.system_key_header.pack(side='top', fill='both', expand=True)
+        self.system_key_header= Label(
+            self.system_frame,
+            text='Uppercase Letter\t\t\tMove Forward while Drawing\nLowercase Letter\t\t\tMove Forward without Drawing\n+\t\t\t\tTurn Right\n-\t\t\t\tTurn Left\n[\t\t\t\tStart New Branch\n]\t\t\t\tReturn to Previous Branch',
+            font=('System', 11), 
+            bg='black',
+            fg='white',
+            anchor='center',
+            justify='left',
+            wraplength=int(self.window_width * 0.3)
+        )
+        self.system_key_header.pack(side='top', fill='both', expand=True)
+        #endregion system key
+        #region system selection
+        self.system_selection_frame = Frame(self.system_frame)
+        self.system_selection_frame.config(
+            bg='black',
+        )
+        self.system_selection_example = Button(
+            self.system_selection_frame, 
+            text='See an Example', 
+            command=self.selection_initilization(1), 
+            font=("Helvetica", 12, 'bold'), 
+            bg="black", 
+            fg="black",
+            highlightbackground="black", 
+            highlightcolor="white", 
+            relief="flat",
+            highlightthickness=2
+        )
+        self.system_selection_example.pack(
+            side='left',  
+            fill='y',     
+            expand=True   
+        )
+        self.system_selection_custom = Button(
+            self.system_selection_frame, 
+            text='Create my Own', 
+            command=self.selection_initilization(2), 
+            font=("Helvetica", 12, 'bold'), 
+            bg="black", 
+            fg="black",
+            highlightbackground="black", 
+            highlightcolor="white", 
+            relief="flat",
+            highlightthickness=2
+        )
+        self.system_selection_custom.pack(
+            side='right',  
+            fill='y',     
+            expand=True   
+        )
+        self.system_selection_frame.pack(
+            side='bottom',  
+            fill='x',     
+            expand=True   
+        )
+        #endregion system selection
         self.system_frame.pack(
             side='left',  
             fill='y',     
@@ -170,3 +250,12 @@ class Window:
             expand=True   
         )
         #endregion visualization
+
+    def selection_initilization(self, selection): 
+        pass
+
+    def select_example(self):
+        pass
+
+    def select_custom(self):
+        pass
