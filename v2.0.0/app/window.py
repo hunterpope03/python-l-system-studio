@@ -253,7 +253,6 @@ class Window:
 
     def selection_initilization(self, selection): 
         pass
-
     def select_example(self):
         pass
 
