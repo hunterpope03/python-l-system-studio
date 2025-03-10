@@ -16,8 +16,6 @@ This personal project explores the uses of L-Systems and how they can be used to
 
 Using Paul Bourke's [L-System Manual](https://paulbourke.net/fractals/lsys/) as a guiding tool, I developed a simple parser, utilized matplotlib to visualize the results, and implemented unittest's testing software to ensure proper parsing behavior.
 
-This program features solely variables and logic organized into modules. I anticipate v2.0.0 to feature a GUI setup with object-oriented programming for back-end logic, and v3.0.0 to feature a full-stack website with a much more responsive, clean user interface.
-
   Extensive data on L-Systems can be found within this program and on this [repository's homepage](https://github.com/hunterpope03/python-l-system-parser-and-visualizer). 
 
 ## Directory Structure
