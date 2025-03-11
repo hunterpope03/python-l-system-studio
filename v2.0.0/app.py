@@ -1,5 +1,8 @@
+from modules.tutorial import Tutorial
+
 class LStudio: 
     def __init__(self): 
+        print(f'\n***** \tL-Studio v2.0.0\t *****\n')
         self.menu()
 
     def validate(self, valid): 
@@ -11,7 +14,6 @@ class LStudio:
                 print('\nInvalid.', end=' ')
             
     def menu(self):
-        print(f'\n ***** \tL-Studio v2.0.0\t ***** \n')
 
         print('\t1. Tutorial')
         print('\t2. Examples')
@@ -20,4 +22,10 @@ class LStudio:
 
         user = self.validate(['1', '2', '3', '4'])
 
+        match user: 
+            case '1': 
+                print(Tutorial())
+
+if __name__ == '__main__':
+    LStudio()
         
