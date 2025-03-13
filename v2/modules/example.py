@@ -1,10 +1,9 @@
-from validate import validate
+from validation import validate
 from example_library import example_library
 
-class Examples(): 
+class Example(): 
     def __init__(self): 
         print('\n\n' + '***** Example Systems *****' + '\n\n')
-        self.menu()
 
     def menu(self): 
 
@@ -23,10 +22,10 @@ class Examples():
 
         user = validate(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'])
 
-        self.print_details(user)
+        return user
 
-    def print_details(self, user): 
-        
+    def get_details(self, user): 
+
         details = example_library(user)
 
         name = details[0]
@@ -36,14 +35,16 @@ class Examples():
         turn_angle = details[4]
         starting_direction = details[5]
 
-        print('\n\n' + f'System: {name}')
-        print('\n\t' + f'• Axiom: {axiom}')
-        print('\t' + f'• Rules: {rules}')
-        print('\t' + f'• Iterations: {iterations}')   
-        print('\t' + f'• Turn Angle: {turn_angle}')
-        print('\t' + f'• Starting Direction: {starting_direction}')
+        return [name, axiom, rules, iterations, turn_angle, starting_direction]
+    
+    def print_details(self, details): 
 
-        null = input('\n\n' + 'Enter anything to parse the L-string: ')
-        
-if __name__ == '__main__':
-    Examples()
+        print('\n\n' + f'System: {details[0]}')
+        print('\n\t' + f'• Axiom: {details[1]}')
+        print('\t' + f'• Rules: {details[2]}')
+        print('\t' + f'• Iterations: {details[3]}')   
+        print('\t' + f'• Turn Angle: {details[4]}°')
+        print('\t' + f'• Starting Direction: {details[5]}°')
+    
+# if __name__ == '__main__':
+#     Examples()
