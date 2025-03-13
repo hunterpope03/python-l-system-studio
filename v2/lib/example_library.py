@@ -1,5 +1,6 @@
 def example_library(example_num): 
     match example_num: 
+
         case '1': 
             name = 'Binary Tree'
             axiom = 'X'
@@ -8,6 +9,7 @@ def example_library(example_num):
             iterations = 10
             turn_angle = 45
             starting_direction = 90
+
         case '2': 
             name = 'Fractal Plant'
             axiom = '-X'
@@ -16,6 +18,7 @@ def example_library(example_num):
             iterations = 8
             turn_angle = 25
             starting_direction = 90
+            
         case '3': 
             name = 'Bush 1'
             axiom = 'Y'
@@ -24,6 +27,7 @@ def example_library(example_num):
             iterations = 8
             turn_angle = 25.7
             starting_direction = 90
+
         case '4': 
             name = 'Bush 2'
             axiom = 'F'
@@ -31,6 +35,7 @@ def example_library(example_num):
             iterations = 5
             turn_angle = 22.5
             starting_direction = 90
+
         case '5':
             name = 'Bush 4'
             axiom = 'VZFFF'
@@ -42,6 +47,7 @@ def example_library(example_num):
             iterations = 12
             turn_angle = 20
             starting_direction = 90
+
         case '6': 
             name = 'Board'
             axiom = 'F+F+F+F'
@@ -49,6 +55,7 @@ def example_library(example_num):
             iterations = 5
             turn_angle = 90
             starting_direction = 0
+
         case '7':
             name = 'Sierpinski Arrowhead'
             axiom = 'YF'
@@ -57,6 +64,7 @@ def example_library(example_num):
             iterations = 8
             turn_angle = 60
             starting_direction = 0
+
         case '8': 
             name = 'Pentaplexity'
             axiom = 'F++F++F++F++F'
@@ -64,6 +72,7 @@ def example_library(example_num):
             iterations = 5
             turn_angle = 36
             starting_direction = 0
+
         case '9':
             name = 'Dragon Curve'
             axiom = 'FX'
@@ -73,6 +82,7 @@ def example_library(example_num):
             iterations = 14
             turn_angle = 90
             starting_direction = 90
+            
         case '10':
             name = 'Kolam'
             axiom = '-D--D'

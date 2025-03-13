@@ -1,15 +1,15 @@
-from validation import validate
-from example_library import example_library
+from .utils import validate
+from lib.example_library import example_library
 
-class Example(): 
+class LSystemExamples(): 
     def __init__(self): 
-        print('\n\n' + '***** Example Systems *****' + '\n\n')
+        print('\n\n' + '***** Example Systems *****')
 
     def menu(self): 
 
-        print('Choose an example option below to view the system\'s details and plot the system:' + '\n')
+        print('\n\n' + 'Choose an example option below to view the system\'s details and plot the system:')
 
-        print('\t' + '1. Binary Tree')
+        print('\n\t' + '1. Binary Tree')
         print('\t' + '2. Fractal Plant')
         print('\t' + '3. Bush 1')
         print('\t' + '4. Bush 2')
@@ -41,10 +41,9 @@ class Example():
 
         print('\n\n' + f'System: {details[0]}')
         print('\n\t' + f'• Axiom: {details[1]}')
-        print('\t' + f'• Rules: {details[2]}')
-        print('\t' + f'• Iterations: {details[3]}')   
+        print('\t' + '• Rules: ' , '\n')
+        for rule in details[2]: 
+            print('\t\t' + f'{rule} -> {details[2][rule]}')
+        print('\n\t' + f'• Iterations: {details[3]}')   
         print('\t' + f'• Turn Angle: {details[4]}°')
-        print('\t' + f'• Starting Direction: {details[5]}°')
-    
-# if __name__ == '__main__':
-#     Examples()
+        print('\t' + f'• Starting Direction: {details[5]}°' + '\n\n')
