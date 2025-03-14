@@ -46,4 +46,5 @@ class LSystemVisualizer():
 
         figure.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
 
+        print(self.plot_color, self.plot_background)
         plt.show(block = True)

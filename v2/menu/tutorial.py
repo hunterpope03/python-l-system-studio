@@ -31,7 +31,7 @@ def program_key():
     print('\t' + '• [: command to save state to stack (used in branching)')
     print('\t' + '• ]: command to remove state from stack (used in branching)' + '\n\n')
 
-    null = input('Enter anything to view input restrictions in creating a custom L-system: ')
+    null = input('Enter anything to view the input restrictions: ')
     return null
 
 def input_restrictions():
@@ -42,7 +42,7 @@ def input_restrictions():
     print('3) The number of iterations must be a positive integer less than 10')
     print('4) Both the turn angle and starting direction must be numbers in the range [0, 360]' + '\n\n')
 
-    null = input('Enter anything to proceed back to the menu: ')
+    null = input('Enter anything to continue: ')
     return null
 
 def tutorial():

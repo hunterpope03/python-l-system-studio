@@ -4,9 +4,9 @@ def example_library(example_num):
         case '1': 
             name = 'Binary Tree'
             axiom = 'X'
-            rules = {'X' : 'Y[X]X}', 
-                     'Y' : 'YY'}
-            iterations = 10
+            rules = {'X' : 'F[+X][-X]FX', 
+                     'F' : 'FF'}
+            iterations = 8
             turn_angle = 45
             starting_direction = 90
 
@@ -44,7 +44,7 @@ def example_library(example_num):
                     'X' : '-W[+X]Z',
                     'Y' : 'YZ',
                     'Z' : '[-FFF][+FFF]F'}
-            iterations = 12
+            iterations = 11
             turn_angle = 20
             starting_direction = 90
 
@@ -90,7 +90,7 @@ def example_library(example_num):
                      'B' : 'F--FFFF++F++FFFF--F--FFFF++F',
                      'C' : 'BFA--BFA',
                      'D' : 'CFC--CFC'}
-            iterations = 5
+            iterations = 20
             turn_angle = 45
             starting_direction = 0
 
