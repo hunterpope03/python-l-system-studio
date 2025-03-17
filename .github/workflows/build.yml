@@ -17,22 +17,20 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.13.1'  # Use a valid Python version
+          python-version: '3.13.1'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pyinstaller
 
-      - name: Navigate to v2 folder
-        run: cd v2
-
-      - name: Build executable for v3
+      - name: Build executable for v2
         run: |
+          cd v2
           pyinstaller --onefile app.py
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4  # Updated to v4
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ runner.os }}-v2-executable
           path: v2/dist/
