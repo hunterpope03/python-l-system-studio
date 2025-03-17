@@ -47,7 +47,7 @@ Using Paul Bourke's [L-System Manual](https://paulbourke.net/fractals/lsys/) as 
 
 ##### Quadratic Gosper, via [Paul Bourke](https://paulbourke.net/fractals/lsys/)
 <img width="784" alt="Screenshot 2025-02-05 at 7 32 53 PM" src="https://github.com/user-attachments/assets/175b4e4e-6330-4ad4-b557-b0df8fa3aa2b" />
-  ##### Additional documentation and commentary are included directly within the code files. 
+  #### Additional documentation and commentary are included directly within the code files. 
 
 
   
