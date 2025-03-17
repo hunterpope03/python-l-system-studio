@@ -1,4 +1,4 @@
-def example_data(example_num): # contains the attributes for each example L-System
+def example_data(example_num) -> list: # contains the attributes for each example L-System
     match example_num: 
 
         case '1': 

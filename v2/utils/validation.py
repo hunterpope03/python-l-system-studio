@@ -1,4 +1,4 @@
-def validate_menu(valid_inputs):
+def validate_menu(valid_inputs) -> str:
     """
     Prompts the user to enter a choice and validates it against a given list of valid inputs.
 

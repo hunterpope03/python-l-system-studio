@@ -1,5 +1,5 @@
 class LSystemParser():
-    def __init__(self, axiom, rules, iterations): 
+    def __init__(self, axiom, rules, iterations) -> None: 
         """
         Initializes an LSystemParser object with the given axiom, rules, and number of iterations.
 
@@ -12,7 +12,7 @@ class LSystemParser():
         self.rules = rules
         self.iterations = iterations  
         
-    def parse(self): 
+    def parse(self) -> str: 
         """
         Parses the L-System according to the given rules and number of iterations.
 

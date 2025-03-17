@@ -35,7 +35,7 @@ INPUT_RESTRICTIONS = [ # input restrictions text with formatted strings to simpl
 ]
 
 class LSystemTutorial:
-    def __init__(self): 
+    def __init__(self) -> None: 
         """
         Initializes an LSystemTutorial object with predefined sections of the tutorial.
         """
@@ -43,7 +43,7 @@ class LSystemTutorial:
         self.program_key = PROGRAM_KEY
         self.input_restrictions = INPUT_RESTRICTIONS
     
-    def tutorial_text(self): 
+    def tutorial_text(self) -> dict: 
         """
         Returns a dictionary mapping the different sections of the tutorial to their corresponding text.
         
@@ -58,7 +58,7 @@ class LSystemTutorial:
 
         return tutorial_map
     
-    def cont_intro(self): 
+    def cont_intro(self) -> str: 
         """
         Blank input continue point that allows the user to enter anything to continue with the program.
         Includes a custom note to guide the user through the tutorial.
@@ -66,7 +66,7 @@ class LSystemTutorial:
         cont = input('Press Enter to view the program key: ')
         return cont
     
-    def cont_key(self): 
+    def cont_key(self) -> str: 
         """
         Blank input continue point that allows the user to enter anything to continue with the program.
         Includes a custom note to guide the user through the tutorial.
@@ -74,7 +74,7 @@ class LSystemTutorial:
         cont = input('Press Enter to view input restrictions in creating a custom L-System: ')
         return cont
     
-    def cont_restrictions(self): 
+    def cont_restrictions(self) -> str: 
         """
         Blank input continue point that allows the user to enter anything to continue with the program.
         Includes a custom note to guide the user through the tutorial.

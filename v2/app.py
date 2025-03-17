@@ -1,25 +1,25 @@
 import sys
 sys.dont_write_bytecode = True
 
-from menu import LSystemTutorial, LSystemCustom, LSystemExample, LSystemSettings # import classes for menu options
-from utils import validate_menu # import function for menu_validation
+from menu import LSystemTutorial, LSystemCustom, LSystemExample, LSystemSettings # import classes for menu objects.
+from utils import validate_menu # import function for validating menu options.
 
 class LSystemStudio:
-    def __init__(self): 
+    def __init__(self) -> None: 
         """
         Initializes an LSystemStudio object with default visualization settings.
         """
         self.visualizer_drawing_color = 'red'
         self.visualizer_background_color = 'black'
 
-    def main_menu(self): 
+    def main_menu(self) -> str: 
         """
         Displays the main menu for the L-System Studio application and validates user input with the validate_menu function found in utils/validation.py.
 
         Returns:
         str: The validated user choice as a string from the menu options.
         """
-        print('\n\n' + 'Select a menu option below (press CTRL + C to exit the program at any time):' + '\n') # adds a note to guide the user to quit the program at any time
+        print('\n\n' + 'Select a menu option below (press CTRL + C to exit the program at any time):' + '\n') # adds a note to guide the user to quit the program at any time.
 
         print('\t' + '1. Tutorial')
         print('\t' + '2. Example Systems')
@@ -31,7 +31,7 @@ class LSystemStudio:
 
         return user
     
-    def parsed_system_length(self, parsed_system): 
+    def parsed_system_length(self, parsed_system) -> str: 
         """
         Takes in a parsed L-system and returns the number of characters in the string.
 
@@ -44,7 +44,7 @@ class LSystemStudio:
         length_txt = f'The parsed L-System is {len(parsed_system)} characters long.' + '\n\n'
         return length_txt
     
-    def cont_parsed(self): 
+    def cont_parsed(self) -> str: 
         """
         Blank input continue point that allows the user to enter anything to continue with the program.
         Provides a note as to how to continue with the program after the visualization appears. 
@@ -52,7 +52,7 @@ class LSystemStudio:
         cont = input('Press Enter to visualize the L-System.\n(close the GUI window to proceed with the program): ')
         return cont
     
-def main():
+def main() -> None:
     app = LSystemStudio() # create LSystemStudio object only once.
 
     print('\n\n' + '***** L-Studio v2.0.0 *****') # print program title only once.

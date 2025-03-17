@@ -1,7 +1,7 @@
 from utils import LSystemParser, LSystemVisualizer # import classes for parsing and visualizing.
 
 class LSystemCustom(): 
-    def __init__(self): 
+    def __init__(self) -> None: 
         """
         Initializes an LSystemCustom object with empty variables that will contian the attributes of the system and a variable that contains all of the valid characters that is used for validating user input.
         """
@@ -12,7 +12,7 @@ class LSystemCustom():
         self.turn_angle = None
         self.starting_direction = None
 
-    def custom_details(self): 
+    def custom_details(self) -> list: 
         """
         Collects all data values for the custom L-System from the user and validates each value with the respective validation functions.
 
@@ -40,7 +40,7 @@ class LSystemCustom():
             '\n\t' + f'• Starting Direction: {self.starting_direction}°' + '\n\n'
         ] # return a list containing the statements for the system's details as formatted strings. 
     
-    def validate_axiom(self): 
+    def validate_axiom(self) -> str: 
         """
         Collects the axiom from the user and validates that it is not empty, no longer than 15 characters, does not contain spaces, and only contains valid characters.
 
@@ -65,7 +65,7 @@ class LSystemCustom():
 
         return axiom
 
-    def validate_rules(self, axiom):
+    def validate_rules(self, axiom) -> dict:
         """
         Collects and validates transformation rules for each uppercase variable in the given axiom.
 
@@ -103,7 +103,7 @@ class LSystemCustom():
 
         return rules
 
-    def validate_iterations(self):
+    def validate_iterations(self) -> int:
         """
         Collects the number of iterations from the user and validates that it is a non-negative integer no larger than 10.
 
@@ -126,7 +126,7 @@ class LSystemCustom():
 
         return iterations
 
-    def validate_turn_angle(self): 
+    def validate_turn_angle(self) -> float: 
         """
         Collects the turn angle from the user and validates that it is a valid floating-point number between 0° and 360°.
 
@@ -147,7 +147,7 @@ class LSystemCustom():
 
         return turn_angle
 
-    def validate_starting_direction(self): 
+    def validate_starting_direction(self) -> float: 
         """
         Collects the starting direction from the user and validates that it is a valid floating-point number between 0° and 360°.
 
@@ -168,7 +168,7 @@ class LSystemCustom():
 
         return starting_direction
     
-    def parse_custom(self): 
+    def parse_custom(self) -> str: 
         """
         Parses the L-System associated with the current example and returns the parsed system.
 
@@ -179,7 +179,7 @@ class LSystemCustom():
         parsed_system = parser_obj.parse() # parse the system.
         return parsed_system # return the parsed system.
     
-    def visualize_custom(self, drawing_color, background_color, parsed): 
+    def visualize_custom(self, drawing_color, background_color, parsed) -> None: 
         """
         Visualizes the L-System and returns the visualization.
 

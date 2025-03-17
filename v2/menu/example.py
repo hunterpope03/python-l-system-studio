@@ -2,7 +2,7 @@ from utils import validate_menu, LSystemParser, LSystemVisualizer # import funct
 from lib import example_data # import function for getting example data.
 
 class LSystemExample(): 
-    def __init__(self):
+    def __init__(self) -> None: 
         """
         Initializes an LSystemExample object with empty variables that will contain the attributes of the system.
         """
@@ -13,7 +13,7 @@ class LSystemExample():
         self.turn_angle = None
         self.starting_direction = None
 
-    def example_menu(self): 
+    def example_menu(self) -> str: 
         """
         Prints the example menu and validates the user's input with the validate_menu function found in utils/validation.py.
 
@@ -37,7 +37,7 @@ class LSystemExample():
 
         return user
 
-    def example_details(self, example_num): 
+    def example_details(self, example_num) -> list: 
         """
         Retrieves and stores the selected example's attributes and returns a list containing the system's details as formatted strings to simplify the output process.
 
@@ -71,7 +71,7 @@ class LSystemExample():
             '\n\t' + f'• Starting Direction: {self.starting_direction}°' + '\n\n'
         ] # return a list containing the statements for the system's details as formatted strings. 
     
-    def parse_example(self): 
+    def parse_example(self) -> str: 
         """
         Parses the L-System associated with the current example and returns the parsed system.
 
@@ -82,7 +82,7 @@ class LSystemExample():
         parsed_system = parser_obj.parse() # parse the system.
         return parsed_system # return the parsed system.
     
-    def visualize_example(self, drawing_color, background_color, parsed): 
+    def visualize_example(self, drawing_color, background_color, parsed) -> None: 
         """
         Visualizes the L-System and returns the visualization.
 

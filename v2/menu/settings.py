@@ -1,11 +1,11 @@
 class LSystemSettings(): 
-    def __init__(self): 
+    def __init__(self) -> None: 
         """
         Initializes an LSystemSettings object with a list of valid colors that will be used for validating user input.
         """
         self.valid_colors = ['black', 'white', 'red', 'orange', 'yellow', 'green', 'blue', 'purple']
 
-    def drawing_menu(self): 
+    def drawing_menu(self) -> str: 
         """
         Displays a menu for changing the drawing color of the visualization.
         
@@ -20,7 +20,7 @@ class LSystemSettings():
 
         return color
     
-    def background_menu(self): 
+    def background_menu(self) -> str: 
         """
         Displays a menu for changing the background color of the visualization.
         
@@ -31,7 +31,7 @@ class LSystemSettings():
 
         return color
     
-    def validate_drawing_color(self, valid_colors): 
+    def validate_drawing_color(self, valid_colors) -> str: 
         """
         Collects the drawing color from the user and validates that it is a valid color.
 
@@ -51,7 +51,7 @@ class LSystemSettings():
 
         return color
 
-    def validate_background_color(self, valid_colors): 
+    def validate_background_color(self, valid_colors) -> str: 
         """
         Collects the backgrounds color from the user and validates that it is a valid color.
 
