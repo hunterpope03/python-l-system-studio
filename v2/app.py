@@ -1,101 +1,137 @@
 import sys
 sys.dont_write_bytecode = True
 
-from menu import * 
-from tools import *
+from menu import LSystemTutorial, LSystemCustom, LSystemExample, LSystemSettings # import classes for menu options
+from utils import validate_menu # import function for menu_validation
 
-PLOT_COLOR = 'red'
-BACKGROUND_COLOR = 'black'
-
-class LStudio: 
+class LSystemStudio:
     def __init__(self): 
-        pass
+        """
+        Initializes an LSystemStudio object with default visualization settings.
+        """
+        self.visualizer_drawing_color = 'red'
+        self.visualizer_background_color = 'black'
 
-    def menu(self):
-        print('\n\n' + 'Select a menu option to continue.' + '\n')
+    def main_menu(self): 
+        """
+        Displays the main menu for the L-System Studio application and validates user input with the validate_menu function found in utils/validation.py.
+
+        Returns:
+        str: The validated user choice as a string from the menu options.
+        """
+        print('\n\n' + 'Select a menu option below (press CTRL + C to exit the program at any time):' + '\n') # adds a note to guide the user to quit the program at any time
 
         print('\t' + '1. Tutorial')
         print('\t' + '2. Example Systems')
         print('\t' + '3. Custom System')
-        print('\t' + '4. Plot Settings')
+        print('\t' + '4. Visualizer Settings')
         print('\t' + '5. Quit')
 
-        user = validate_menu(['1', '2', '3', '4', '5'])
+        user = validate_menu(['1', '2', '3', '4', '5']) # get validated user input.
 
         return user
     
-    def tutorial_selection(self): 
-        tutorial()
+    def parsed_system_length(self, parsed_system): 
+        """
+        Takes in a parsed L-system and returns the number of characters in the string.
 
-    def examples_selection(self): 
-        ex = LSystemExamples()
-        user = ex.menu()
-        details = ex.get_details(user)
-        ex.print_details(details[0])
-        self.print_system_details(details[1], details[2], details[3], details[4], details[5])
-        parser = LSystemParser(details[1], details[2], details[3])
-        null = input('Enter anything to parse the L-System: ')
-        parsed = parser.parse()
-        print(parsed)
-        self.print_length(parsed)
-        visualizer = LSystemVisualizer(PLOT_COLOR, BACKGROUND_COLOR, parsed, details[4], details[5])
-        null = input('Enter anything to visualize the L-System: ')
-        visualizer.visualize()
+        Parameters:
+        parsed_system (str): The parsed L-System string.
 
-    def custom_selection(self): 
-        custom = CustomLSystem()
-        custom.key_restrictions()
-        data = custom.get_data()
-        print(data)
-        custom.print_details()
-        self.print_system_details(data[0], data[1], data[2], data[3], data[4])
-        parser = LSystemParser(data[0], data[1], data[2])
-        null = input('Enter anything to parse the L-System: ')
-        parsed = parser.parse()
-        self.print_length(parsed)
-        visualizer = LSystemVisualizer(PLOT_COLOR, BACKGROUND_COLOR, parsed, data[3], data[4])
-        null = input('Enter anything to visualize the L-System: ')
-        visualizer.visualize()
+        Returns:
+        str: A formatted string indicating the length in the parsed L-System.
+        """
+        length_txt = f'The parsed L-System is {len(parsed_system)} characters long.' + '\n\n'
+        return length_txt
+    
+    def cont_parsed(self): 
+        """
+        Blank input continue point that allows the user to enter anything to continue with the program.
+        Provides a note as to how to continue with the program after the visualization appears. 
+        """
+        cont = input('Press Enter to visualize the L-System.\n(close the GUI window to proceed with the program): ')
+        return cont
+    
+def main():
+    app = LSystemStudio() # create LSystemStudio object only once.
 
-    def visualizer_settings(self): 
-        settings = LSystemVisualizerSettings()
-        settings.menu()
-        colors = settings.get_data()
-        global PLOT_COLOR
-        PLOT_COLOR = colors[0]
-        global BACKGROUND_COLOR
-        BACKGROUND_COLOR = colors[1] 
-        
-    def print_system_details(self, axiom, rules, iterations, turn_angle, starting_direction): 
-            print('\n\t' + f'• Axiom: {axiom}')
-            print('\t' + '• Rules: ' , '\n')
-            for rule in rules: 
-                print('\t\t' + f'{rule} -> {rules[rule]}')
-            print('\n\t' + f'• Iterations: {iterations}')   
-            print('\t' + f'• Turn Angle: {turn_angle}°')
-            print('\t' + f'• Starting Direction: {starting_direction}°' + '\n\n')
-
-    def print_length(self, parsed): 
-        print('\n\n' + f'The parsed L-System is {len(parsed)} character long.' + '\n\n')
-
-def main(): 
-    print('\n\n' + '***** L-Studio v2.0.0 *****')
+    print('\n\n' + '***** L-Studio v2.0.0 *****') # print program title only once.
 
     while True: 
-        app = LStudio()
-        user = app.menu()
+        try: 
+            user = app.main_menu() # continously display menu and gather user input.
 
-        match user: 
-            case '1': 
-                app.tutorial_selection()
-            case '2':
-                app.examples_selection()
-            case '3':
-                app.custom_selection()
-            case '4':
-                app.visualizer_settings()
-            case '5': 
-                break
-        
+            match user: 
+
+                # handle 'tutorial' menu option
+                case '1':
+                    tutorial_obj = LSystemTutorial() # create LSystemTutorial object found in menu/tutorial.py.
+                    text = tutorial_obj.tutorial_text() # get tutorial text.
+                    for section in text: 
+                        for line in text[section]: 
+                            print(line) # print each line of each section of the text.
+                        if section == 'introduction': 
+                            tutorial_obj.cont_intro() # after printing the introduction section, show a blank input continue point.
+                        elif section == 'program_key': 
+                            tutorial_obj.cont_key() # after printing the porgram key section, show a blank input continue point.
+                        else: 
+                            tutorial_obj.cont_restrictions() # after printing the inpput_restrictions section, show a blank input continue point.
+
+                # handle 'example systems' menu option
+                case '2': 
+                    example_obj = LSystemExample() # create LSystemExample object found in menu/example.py.
+                    user = example_obj.example_menu() # display example menu and gather user input.
+                    details = example_obj.example_details(user) # get example details.
+                    for section in details: # print out details via formatted strings.
+                        if isinstance(section, list): # for the variable, which is a list, print out the rule of each entry in the list separately.
+                            for line in section: 
+                                print(line)
+                        else: 
+                            print(section) # if not the rules variable, simply print the section.
+                    parsed_system = example_obj.parse_example() # parse the system.
+                    length = app.parsed_system_length(parsed_system) # get the system length.
+                    print(length) # print the system length.
+                    app.cont_parsed() # blank input continue point.
+                    visualized_system = example_obj.visualize_example(app.visualizer_drawing_color, app.visualizer_background_color, parsed_system) # visualize the system.
+
+                # handle 'custom system' menu option
+                case '3': 
+                    custom_obj = LSystemCustom() # create LSystemCustom object found in menu/custom.py.
+                    tutorial_obj = LSystemTutorial() # create an LSystemTutorial object as well to print the program key and input restrictions.
+                    text = tutorial_obj.tutorial_text() # get the tutorial text.
+                    for section in text: # print the tutorial text - the introduction section.
+                        if section != 'introduction': 
+                            for line in text[section]: 
+                                print(line)
+                    details = custom_obj.custom_details() # get the custom details.
+                    for section in details: # print the details via formatted strings.
+                        if isinstance(section, list): 
+                            for line in section: 
+                                print(line)
+                        else: 
+                            print(section)
+                    parsed_system = custom_obj.parse_custom() # parse the system.
+                    length = app.parsed_system_length(parsed_system) # get the system length.
+                    print(length) # print the system length.
+                    app.cont_parsed() # blank input continue point.
+                    visualized_system = custom_obj.visualize_custom(app.visualizer_drawing_color, app.visualizer_background_color, parsed_system) # visualize the system.
+
+                # handle 'visualizer settings' menu option
+                case '4':
+                    settings_obj = LSystemSettings() # create LSystemSettings object found in menu/settings.py.
+                    drawing_user = settings_obj.drawing_menu() # display the drawing settings menu and gather user input.
+                    background_user = settings_obj.background_menu() # display the background settings menu and gather user input.
+                    app.visualizer_drawing_color = drawing_user 
+                    app.visualizer_background_color = background_user # update the Studio object's color settings.
+
+                # handle 'quit' menu option.
+                case '5':
+                    print('\n')
+                    break
+                
+        except Exception as e: # print error message and break in the instance of any error.
+            print('\n\n' + f'Error: {e}' + '\n\n')
+            break
+
 if __name__ == '__main__':
     main()
