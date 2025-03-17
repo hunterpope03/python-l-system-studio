@@ -2,7 +2,7 @@ def example_data(example_num) -> list: # contains the attributes for each exampl
     match example_num: 
 
         case '1': 
-            name = 'Binary Tree'
+            name = 'Fractal Tree'
             axiom = 'X'
             rules = {'X' : 'F[+X][-X]FX', 
                      'F' : 'FF'}

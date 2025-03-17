@@ -22,7 +22,7 @@ class LSystemExample():
         """
         print('\n\n' + 'Choose an example option below to view the system\'s details and plot the system:')
 
-        print('\n\t' + '1. Binary Tree')
+        print('\n\t' + '1. Fractal Tree')
         print('\t' + '2. Fractal Plant')
         print('\t' + '3. Bush 1')
         print('\t' + '4. Bush 2')
