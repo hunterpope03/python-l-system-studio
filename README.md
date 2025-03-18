@@ -1,6 +1,7 @@
 # Python Lindenmayer(L)-System Parser & Visualizer Home
 In this repository, you will find all versions of the **educational showcase** project _Python L-System Parser and Visualizer_.
-* [Version 1.0.0](https://github.com/hunterpope03/python-l-system-parser-and-visualizer/tree/main/v1.0.0)
+* [Version 1.0.0](https://github.com/hunterpope03/python-l-system-parser-and-visualizer/tree/main/v1)
+* [Version 2.0.0](https://github.com/hunterpope03/python-l-system-parser-and-visualizer/tree/main/v2)
 
 ## What is an L-System?
 A [Lindenmayer(L)-System](https://en.wikipedia.org/wiki/L-system) is a mathematical model first invented by the Hungarian biologist and botanist [Aristid Lindenmayer](https://en.wikipedia.org/wiki/Aristid_Lindenmayer). An L-System works by repeatedly transforming character(s) in a string into a longer, more complex string of characters. Originally used to model the growth of bacteria and algae, L-Systems have grown to be used in textiles, games, neural networks, and art. 
@@ -41,9 +42,13 @@ Using all of this information, a visualizer is fed a parsed string and creates a
 
 Note that some programs may be more or less complex, allowing for a range of commands/features.
 
-## Example Visuals (from v1.0.0)
+## Example Visuals 
 
-Here are some examples from my first version of this project: 
+Here are some examples from the second version of this project: 
+
+https://github.com/user-attachments/assets/5220e465-d3e0-4fb8-9f7e-1d73968e2daf
+
+Here are some examples from my first version of this project, before I added animated visualizations:
 
 ##### Dragon Curve, via [Paul Bourke](https://paulbourke.net/fractals/lsys/)
 <img width="786" alt="Dragon Curve System" src="https://github.com/user-attachments/assets/8059714b-c948-45b9-86c5-8ea79d283c44" />
