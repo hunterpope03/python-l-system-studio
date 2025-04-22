@@ -1,4 +1,4 @@
-# Python Lindenmayer(L)-System Parser & Visualizer Home
+# Python Lindenmayer(L)-System Studio Home
 In this repository, you will find all versions of the **educational showcase** project _Python L-System Parser and Visualizer_.
 * [Version 1.0.0](https://github.com/hunterpope03/python-l-system-parser-and-visualizer/tree/main/v1)
 * [Version 2.0.0](https://github.com/hunterpope03/python-l-system-parser-and-visualizer/tree/main/v2)
